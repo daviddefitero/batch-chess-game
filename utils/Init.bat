@@ -1,20 +1,21 @@
 @echo off
+chcp 65001 > nul
 
-set "empty=   "
-set "wPawn=WP "
-set "wRook=WR "
-set "wKnight=WN "
-set "wBishop=WB "
-set "wQueen=WQ "
-set "wKing=WK "
-set "bPawn=BP "
-set "bRook=BR "
-set "bKnight=BN "
-set "bBishop=BB "
-set "bQueen=BQ "
-set "bKing=BK "
-set "selected=SEL"
-set "possible=(*)"
+set "empty=  "
+set "wPawn=♙ "
+set "wRook=♖ "
+set "wKnight=♘ "
+set "wBishop=♗ "
+set "wQueen=♕ "
+set "wKing=♔ "
+set "bPawn=♟ "
+set "bRook=♜ "
+set "bKnight=♞ "
+set "bBishop=♝ "
+set "bQueen=♛ "
+set "bKing=♚ "
+set "selected=◉ "
+set "possible=• "
 
 REM Inicializar el tablero
 for /L %%i in (1,1,8) do (

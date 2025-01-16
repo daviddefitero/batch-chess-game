@@ -1,16 +1,22 @@
 @echo off
-title AJEDREZ
-echo =====================================
-echo               AJEDREZ     
-echo =====================================
+title CHESS GAME
+color 0A
+
+call .\ui\Header.bat
+echo.
+echo.
+echo    ╔════════════════════════════════════════════════════════════════╗
+echo    ║                       Welcome to Chess                         ║
+echo    ╚════════════════════════════════════════════════════════════════╝
+echo.
+echo    ┌────────────────────────────────────────────────────────────────┐
+echo    │  Note: There is a known issue where some pieces might          │
+echo    │  disappear during gameplay.                                    │
+echo    └────────────────────────────────────────────────────────────────┘
 echo.
 echo.
 echo.
-echo Bienvenido a mi ajedrez
-echo.
-echo Antes de nada tengo que decir que el juego tiene un bug que hace que se borren algunas fichas, pero era muy complejo arreglarlo y no me ha dado tiempo.
-echo.
-echo.
-echo.
-echo Presiona una tecla para comenzar
+echo    ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+echo                        Press any key to start...
+echo    ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 pause > nul
