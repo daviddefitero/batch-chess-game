@@ -2,7 +2,7 @@
 title CHESS GAME
 color 0A
 
-call .\ui\Header.bat
+call "%~dp0..\ui\Header.bat"
 echo.
 echo.
 echo    ╔════════════════════════════════════════════════════════════════╗

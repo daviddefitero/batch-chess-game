@@ -1,26 +1,24 @@
-call .\utils\Init.bat
-
 :gameLoop
 
-call .\ui\Header.bat
+call "%~dp0..\ui\Header.bat"
 
 echo                        ╔════════════════════╗
 echo                        ║    TURN: %turn%     ║
 echo                        ╚════════════════════╝
 echo.
 
-call .\ui\ShowBoard.bat "%empty%" "%selected%" "%possible%" "%wPawn%" "%wRook%" "%wKnight%" "%wBishop%" "%wQueen%" "%wKing%" "%bPawn%" "%bRook%" "%bKnight%" "%bBishop%" "%bQueen%" "%bKing%" board_1_1 board_1_2 board_1_3 board_1_4 board_1_5 board_1_6 board_1_7 board_1_8 board_2_1 board_2_2 board_2_3 board_2_4 board_2_5 board_2_6 board_2_7 board_2_8 board_3_1 board_3_2 board_3_3 board_3_4 board_3_5 board_3_6 board_3_7 board_3_8 board_4_1 board_4_2 board_4_3 board_4_4 board_4_5 board_4_6 board_4_7 board_4_8 board_5_1 board_5_2 board_5_3 board_5_4 board_5_5 board_5_6 board_5_7 board_5_8 board_6_1 board_6_2 board_6_3 board_6_4 board_6_5 board_6_6 board_6_7 board_6_8 board_7_1 board_7_2 board_7_3 board_7_4 board_7_5 board_7_6 board_7_7 board_7_8 board_8_1 board_8_2 board_8_3 board_8_4 board_8_5 board_8_6 board_8_7 board_8_8
+call "%~dp0..\ui\ShowBoard.bat" "%empty%" "%selected%" "%possible%" "%wPawn%" "%wRook%" "%wKnight%" "%wBishop%" "%wQueen%" "%wKing%" "%bPawn%" "%bRook%" "%bKnight%" "%bBishop%" "%bQueen%" "%bKing%" board_1_1 board_1_2 board_1_3 board_1_4 board_1_5 board_1_6 board_1_7 board_1_8 board_2_1 board_2_2 board_2_3 board_2_4 board_2_5 board_2_6 board_2_7 board_2_8 board_3_1 board_3_2 board_3_3 board_3_4 board_3_5 board_3_6 board_3_7 board_3_8 board_4_1 board_4_2 board_4_3 board_4_4 board_4_5 board_4_6 board_4_7 board_4_8 board_5_1 board_5_2 board_5_3 board_5_4 board_5_5 board_5_6 board_5_7 board_5_8 board_6_1 board_6_2 board_6_3 board_6_4 board_6_5 board_6_6 board_6_7 board_6_8 board_7_1 board_7_2 board_7_3 board_7_4 board_7_5 board_7_6 board_7_7 board_7_8 board_8_1 board_8_2 board_8_3 board_8_4 board_8_5 board_8_6 board_8_7 board_8_8
 
 set /p "move=Enter piece position (e.g. E2) or D to deselect: "
 if /I "%move%"=="D" (
-    call .\utils\ClearSelection.bat
+    call "%~dp0..\utils\ClearSelection.bat"
     goto gameLoop
 )
 
 set "col=%move:~0,1%"
 set "row=%move:~1,1%"
 
-call .\utils\LetterToNumber.bat col
+call "%~dp0..\utils\LetterToNumber.bat" col
 
 REM Si hay una pieza seleccionada, este es el movimiento de destino
 if defined selectedPiece (
@@ -37,7 +35,7 @@ if defined selectedPiece (
             set "turn=White"
         )
         REM Limpiar la selección
-        call .\utils\ClearSelection.bat
+        call "%~dp0..\utils\ClearSelection.bat"
         goto gameLoop
     ) else (
         echo Invalid move!

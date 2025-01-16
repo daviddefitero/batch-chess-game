@@ -1,5 +1,8 @@
 @echo off
+setlocal EnableDelayedExpansion
 chcp 65001 > nul
+
+call "%~dp0Menu.bat"
 
 set "empty=  "
 set "wPawn=♙ "
@@ -50,3 +53,5 @@ set "board_8_5=!bKing!"
 set "turn=White"
 set "whiteCaptured=0"
 set "blackCaptured=0"
+
+call "%~dp0Game.bat"

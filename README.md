@@ -30,14 +30,18 @@ Future implementation will include:
 
 ```plaintext
 📦 chess-game
-├── 📁 components
+├── 📁 core
+│   ├── Init.bat
 │   ├── Menu.bat
 │   └── Game.bat
+├── 📁 ui
+│   ├── Header.bat
+│   └── ShowBoard
 ├── 📁 utils
-│   ├── Init.bat
-│   ├── ShowBoard.bat
+│   ├── CheckMovement.bat
 │   ├── ClearSelection.bat
 │   └── LetterToNumber.bat
+├── Game.bat
 └── README.md
 ```
 
